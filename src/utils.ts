@@ -1,3 +1,4 @@
+// variable `apiUrl` can be removed if we use octokit
 const apiUrl = 'https://api.github.com'
 
 
