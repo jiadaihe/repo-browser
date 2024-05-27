@@ -1,3 +1,6 @@
+## About
+It is an application to search Github repos by user name or organization name. You can get quick summary of each repo and its statistics, such as number of stars and main language. You can further sort repos and filter repos by certain criteria. Enjoy and have fun!
+
 ## Start the App
 
 - `npm start`
