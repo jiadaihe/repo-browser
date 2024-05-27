@@ -19,7 +19,7 @@ export const getReposByUser = async (username: string): Promise<{data: any, stat
   if (!res.ok) {
       console.error(`Status ${res.status}. Failed to get repos for user ${username}`)
       return {
-        data: null,
+        data: [],
         status: res.status
         // pagesRemaining: false,
         // pagesPrev: false
@@ -45,7 +45,7 @@ export const getReposByOrg = async (orgname: string): Promise<{data: any, status
   if (!res.ok) {
     console.error(`Status ${res.status}. Failed to get repos for org ${orgname}`)
     return {
-        data: null,
+        data: [],
         status: res.status
       }
   }
@@ -58,11 +58,11 @@ export const getReposByOrg = async (orgname: string): Promise<{data: any, status
 export const getReposByUserOrOrg = async (name: string) => {
   let data = await getReposByUser(name)
   if(data.status === 404) {
-    data = await getReposByUser(name)
+    data = await getReposByOrg(name)
   }
   if(data.status === 404) {
+    // TODO: add alert or pop window?
     console.error(`Status 404. Failed to get repos for user or org ${name}`)
-    return null
   }
   return data.data
 }

@@ -19,9 +19,9 @@ It is an application to search Github repos by user name or organization name. Y
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Scaffolded by `npx create-react-app my-app --template typescript` (https://create-react-app.dev/docs/adding-typescript/)
 
-For pagination, I first implemented client side pagination. But later found out that react-table can achieve it. This could be a future improvement.
+For pagination, I first implemented client side pagination. But later found out that `react-table` can achieve it. This could be a future improvement.
 
-For filtering and sorting, I found an example from https://tanstack.com/table/latest/docs/framework/react/examples/filters, and used code from there. 
+For filtering and sorting, I found an example from `react-table` documentation https://tanstack.com/table/latest/docs/framework/react/examples/filters, and used code from there. 
 
 
 ## Future Improvements

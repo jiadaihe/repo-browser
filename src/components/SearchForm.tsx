@@ -12,8 +12,6 @@ export const SearchForm: React.FC<SearchFormProps> = ({ page, per_page, onSearch
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (username) {
-        // TODO: do not 
-        console.log({username: username, page: page})
         onSearch(username, per_page, page)
     }
   };
